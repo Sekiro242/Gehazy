@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم شكوى - جهاز المدينة</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS (نفس ملف CSS من الصفحة الرئيسية) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (نفس الهيدر من الصفحة الرئيسية) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html">جهاز المدينة</a>
+                </div>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="news.html">الأخبار</a></li>
+                    <li><a href="booking.html">احجز دورك</a></li>
+                    <li><a href="complaint.html" class="active">تقديم شكوى</a></li>
+                    <li><a href="about.html">حول</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>تقديم شكوى</h1>
+                <p>شارك مشكلتك، وساهم في حلها! أرسل شكواك عن منطقتك ليتم مراجعتها واتخاذ الإجراءات اللازمة.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Complaint Form -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>نموذج الشكوى</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="complaintForm">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">الاسم الكامل</label>
+                                    <input type="text" class="form-control" id="name" placeholder="أدخل اسمك الكامل" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="email">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">رقم الهاتف</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم هاتفك">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="area">المنطقة</label>
+                                    <select class="form-select" id="area" required>
+                                        <option value="" selected disabled>اختر المنطقة</option>
+                                        <option value="area1">المنطقة الأولى</option>
+                                        <option value="area2">المنطقة الثانية</option>
+                                        <option value="area3">المنطقة الثالثة</option>
+                                        <option value="area4">المنطقة الرابعة</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="complaintType">نوع الشكوى</label>
+                                    <select class="form-select" id="complaintType" required>
+                                        <option value="" selected disabled>اختر نوع الشكوى</option>
+                                        <option value="water">مشكلة في المياه</option>
+                                        <option value="electricity">مشكلة في الكهرباء</option>
+                                        <option value="roads">مشكلة في الطرق</option>
+                                        <option value="sanitation">مشكلة في الصرف الصحي</option>
+                                        <option value="garbage">مشكلة في النظافة</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="subject">عنوان الشكوى</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="أدخل عنوان الشكوى" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="description">تفاصيل الشكوى</label>
+                                    <textarea class="form-textarea" id="description" placeholder="اشرح تفاصيل المشكلة بوضوح..." required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="attachment">إرفاق صورة (اختياري)</label>
+                                    <input type="file" class="form-control" id="attachment" accept="image/*">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn">
+                                        <i class="fas fa-paper-plane"></i> إرسال الشكوى
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- Sidebar -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>معلومات مهمة</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>يرجى العلم بأن جميع الشكاوى سيتم مراجعتها خلال 48 ساعة من وقت الإرسال.</p>
+                            <p>سيتم إرسال رقم متابعة الشكوى إلى بريدك الإلكتروني.</p>
+                            <hr>
+                            <h3>حالة الشكاوى</h3>
+                            <ul>
+                                <li><span class="badge badge-primary">جديدة</span> - تم استلام الشكوى</li>
+                                <li><span class="badge badge-info">قيد المراجعة</span> - جاري مراجعة الشكوى</li>
+                                <li><span class="badge badge-warning">قيد التنفيذ</span> - جاري العمل على حل المشكلة</li>
+                                <li><span class="badge badge-success">تم الحل</span> - تم حل المشكلة</li>
+                                <li><span class="badge badge-danger">مرفوضة</span> - تم رفض الشكوى</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>تواصل معنا</h2>
+                        </div>
+                        <div class="card-body">
+                            <p><i class="fas fa-phone"></i> الهاتف: 123-456-7890</p>
+                            <p><i class="fas fa-envelope"></i> البريد الإلكتروني: info@citydevice.gov</p>
+                            <p><i class="fas fa-map-marker-alt"></i> العنوان: شارع الرئيسي، المدينة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (نفس الفوتر من الصفحة الرئيسية) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>عن جهاز المدينة</h3>
+                <p>الخدمات الأكثر طلبًا</p>
+                <p>فريقنا</p>
+            </div>
+            <div class="footer-column">
+                <h3>تواصل</h3>
+                <p>اتصل بنا</p>
+                <p>مركز المساعدة</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="copyright">
+            &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+        </div>
+    </footer>
+
+    <script>
+        // Highlight active nav link based on current URL
+        const links = document.querySelectorAll(".nav-links a");
+        const currentUrl = window.location.href;
+        links.forEach(link => {
+            if (currentUrl.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const body = document.body;
+        
+        menuToggle.addEventListener('change', function() {
+            if(this.checked) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // Form submission
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to the server
+            // For demonstration, we'll just show a success message
+            
+            alert('تم إرسال الشكوى بنجاح! سيتم التواصل معك قريبًا.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

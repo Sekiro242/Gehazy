@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احجز دورك - جهاز المدينة</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS (نفس ملف CSS من الصفحة الرئيسية) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (نفس الهيدر من الصفحة الرئيسية) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html">جهاز المدينة</a>
+                </div>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="news.html">الأخبار</a></li>
+                    <li><a href="booking.html" class="active">احجز دورك</a></li>
+                    <li><a href="complaint.html">تقديم شكوى</a></li>
+                    <li><a href="about.html">حول</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>احجز دورك</h1>
+                <p>احصل على رقمك مسبقًا واستمتع بخدمة أسرع وأكثر تنظيمًا دون انتظار طويل</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Booking Steps -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h2>خطوات الحجز</h2>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
+                                <div style="text-align: center; flex: 1;">
+                                    <div style="width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">1</div>
+                                    <p>اختر الخدمة</p>
+                                </div>
+                                <div style="text-align: center; flex: 1;">
+                                    <div style="width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">2</div>
+                                    <p>حدد الموعد</p>
+                                </div>
+                                <div style="text-align: center; flex: 1;">
+                                    <div style="width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">3</div>
+                                    <p>أدخل بياناتك</p>
+                                </div>
+                                <div style="text-align: center; flex: 1;">
+                                    <div style="width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">4</div>
+                                    <p>تأكيد الحجز</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Form -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>نموذج الحجز</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="bookingForm">
+                                <!-- Step 1: Choose Service -->
+                                <div id="step1" class="booking-step">
+                                    <h3 style="margin-bottom: 1.5rem;">اختر الخدمة</h3>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="serviceCategory">فئة الخدمة</label>
+                                        <select class="form-select" id="serviceCategory" required>
+                                            <option value="" selected disabled>اختر فئة الخدمة</option>
+                                            <option value="real-estate">الخدمات العقارية</option>
+                                            <option value="permits">التراخيص</option>
+                                            <option value="certificates">الشهادات</option>
+                                            <option value="other">خدمات أخرى</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="serviceType">نوع الخدمة</label>
+                                        <select class="form-select" id="serviceType" required disabled>
+                                            <option value="" selected disabled>اختر نوع الخدمة</option>
+                                            <!-- Options will be populated based on the selected category -->
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="serviceLocation">موقع تقديم الخدمة</label>
+                                        <select class="form-select" id="serviceLocation" required>
+                                            <option value="" selected disabled>اختر الموقع</option>
+                                            <option value="main">المقر الرئيسي</option>
+                                            <option value="north">فرع المنطقة الشمالية</option>
+                                            <option value="south">فرع المنطقة الجنوبية</option>
+                                            <option value="east">فرع المنطقة الشرقية</option>
+                                            <option value="west">فرع المنطقة الغربية</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div style="text-align: left; margin-top: 2rem;">
+                                        <button type="button" class="btn" id="nextToStep2">
+                                            التالي <i class="fas fa-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2: Choose Date and Time -->
+                                <div id="step2" class="booking-step" style="display: none;">
+                                    <h3 style="margin-bottom: 1.5rem;">حدد الموعد</h3>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="bookingDate">تاريخ الحجز</label>
+                                        <input type="date" class="form-control" id="bookingDate" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="bookingTime">وقت الحجز</label>
+                                        <select class="form-select" id="bookingTime" required>
+                                            <option value="" selected disabled>اختر الوقت</option>
+                                            <option value="09:00">09:00 صباحًا</option>
+                                            <option value="10:00">10:00 صباحًا</option>
+                                            <option value="11:00">11:00 صباحًا</option>
+                                            <option value="12:00">12:00 ظهرًا</option>
+                                            <option value="13:00">01:00 مساءً</option>
+                                            <option value="14:00">02:00 مساءً</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div style="text-align: right; margin-top: 2rem; display: flex; gap: 1rem;">
+                                        <button type="button" class="btn" id="backToStep1" style="background: var(--primary-lighter); color: var(--primary);">
+                                            <i class="fas fa-arrow-right"></i> السابق
+                                        </button>
+                                        <button type="button" class="btn" id="nextToStep3">
+                                            التالي <i class="fas fa-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3: Personal Information -->
+                                <div id="step3" class="booking-step" style="display: none;">
+                                    <h3 style="margin-bottom: 1.5rem;">أدخل بياناتك</h3>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="fullName">الاسم الكامل</label>
+                                        <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="nationalId">رقم الهوية</label>
+                                        <input type="text" class="form-control" id="nationalId" placeholder="أدخل رقم الهوية" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="phoneNumber">رقم الهاتف</label>
+                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="أدخل رقم هاتفك" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">البريد الإلكتروني</label>
+                                        <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                                    </div>
+                                    
+                                    <div style="text-align: right; margin-top: 2rem; display: flex; gap: 1rem;">
+                                        <button type="button" class="btn" id="backToStep2" style="background: var(--primary-lighter); color: var(--primary);">
+                                            <i class="fas fa-arrow-right"></i> السابق
+                                        </button>
+                                        <button type="button" class="btn" id="nextToStep4">
+                                            التالي <i class="fas fa-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 4: Confirmation -->
+                                <div id="step4" class="booking-step" style="display: none;">
+                                    <h3 style="margin-bottom: 1.5rem;">تأكيد الحجز</h3>
+                                    
+                                    <div class="alert alert-info">
+                                        <p>يرجى مراجعة بيانات الحجز قبل التأكيد</p>
+                                    </div>
+                                    
+                                    <div style="background-color: var(--primary-lighter); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                                        <h4 style="margin-bottom: 1rem;">ملخص الحجز</h4>
+                                        
+                                        <div style="display: flex; margin-bottom: 0.5rem;">
+                                            <div style="width: 40%; font-weight: 600;">الخدمة:</div>
+                                            <div id="summaryService">-</div>
+                                        </div>
+                                        
+                                        <div style="display: flex; margin-bottom: 0.5rem;">
+                                            <div style="width: 40%; font-weight: 600;">الموقع:</div>
+                                            <div id="summaryLocation">-</div>
+                                        </div>
+                                        
+                                        <div style="display: flex; margin-bottom: 0.5rem;">
+                                            <div style="width: 40%; font-weight: 600;">التاريخ:</div>
+                                            <div id="summaryDate">-</div>
+                                        </div>
+                                        
+                                        <div style="display: flex; margin-bottom: 0.5rem;">
+                                            <div style="width: 40%; font-weight: 600;">الوقت:</div>
+                                            <div id="summaryTime">-</div>
+                                        </div>
+                                        
+                                        <div style="display: flex; margin-bottom: 0.5rem;">
+                                            <div style="width: 40%; font-weight: 600;">الاسم:</div>
+                                            <div id="summaryName">-</div>
+                                        </div>
+                                        
+                                        <div style="display: flex; margin-bottom: 0.5rem;">
+                                            <div style="width: 40%; font-weight: 600;">رقم الهاتف:</div>
+                                            <div id="summaryPhone">-</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" id="termsAgreement" required>
+                                            <label for="termsAgreement">أوافق على الشروط والأحكام</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="text-align: right; margin-top: 2rem; display: flex; gap: 1rem;">
+                                        <button type="button" class="btn" id="backToStep3" style="background: var(--primary-lighter); color: var(--primary);">
+                                            <i class="fas fa-arrow-right"></i> السابق
+                                        </button>
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fas fa-check"></i> تأكيد الحجز
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- Sidebar -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>معلومات الخدمة</h2>
+                        </div>
+                        <div class="card-body">
+                            <div id="serviceInfo">
+                                <p>يرجى اختيار الخدمة لعرض المعلومات المتعلقة بها.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="margin-top: 2rem;">
+                        <div class="card-header">
+                            <h2>ساعات العمل</h2>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>الأحد - الخميس:</span>
+                                <span>8:00 ص - 3:00 م</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>الجمعة:</span>
+                                <span>مغلق</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>السبت:</span>
+                                <span>9:00 ص - 1:00 م</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="margin-top: 2rem;">
+                        <div class="card-header">
+                            <h2>تواصل معنا</h2>
+                        </div>
+                        <div class="card-body">
+                            <p><i class="fas fa-phone"></i> الهاتف: 123-456-7890</p>
+                            <p><i class="fas fa-envelope"></i> البريد الإلكتروني: info@citydevice.gov</p>
+                            <p><i class="fas fa-map-marker-alt"></i> العنوان: شارع الرئيسي، المدينة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (نفس الفوتر من الصفحة الرئيسية) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>عن جهاز المدينة</h3>
+                <p>الخدمات الأكثر طلبًا</p>
+                <p>فريقنا</p>
+            </div>
+            <div class="footer-column">
+                <h3>تواصل</h3>
+                <p>اتصل بنا</p>
+                <p>مركز المساعدة</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="copyright">
+            &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+        </div>
+    </footer>
+
+    <script>
+        // Highlight active nav link based on current URL
+        const links = document.querySelectorAll(".nav-links a");
+        const currentUrl = window.location.href;
+        links.forEach(link => {
+            if (currentUrl.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const body = document.body;
+        
+        menuToggle.addEventListener('change', function() {
+            if(this.checked) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // Booking form steps navigation
+        document.getElementById('nextToStep2').addEventListener('click', function() {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        });
+        
+        document.getElementById('backToStep1').addEventListener('click', function() {
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step1').style.display = 'block';
+        });
+        
+        document.getElementById('nextToStep3').addEventListener('click', function() {
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+        });
+        
+        document.getElementById('backToStep2').addEventListener('click', function() {
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        });
+        
+        document.getElementById('nextToStep4').addEventListener('click', function() {
+            // Update summary
+            document.getElementById('summaryService').textContent = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
+            document.getElementById('summaryLocation').textContent = document.getElementById('serviceLocation').options[document.getElementById('serviceLocation').selectedIndex].text;
+            document.getElementById('summaryDate').textContent = document.getElementById('bookingDate').value;
+            document.getElementById('summaryTime').textContent = document.getElementById('bookingTime').options[document.getElementById('bookingTime').selectedIndex].text;
+            document.getElementById('summaryName').textContent = document.getElementById('fullName').value;
+            document.getElementById('summaryPhone').textContent = document.getElementById('phoneNumber').value;
+            
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step4').style.display = 'block';
+        });
+        
+        document.getElementById('backToStep3').addEventListener('click', function() {
+            document.getElementById('step4').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+        });
+        
+        // Service category change
+        document.getElementById('serviceCategory').addEventListener('change', function() {
+            const serviceType = document.getElementById('serviceType');
+            serviceType.disabled = false;
+            serviceType.innerHTML = '<option value="" selected disabled>اختر نوع الخدمة</option>';
+            
+            // Populate service types based on selected category
+            if (this.value === 'real-estate') {
+                serviceType.innerHTML += `
+                    <option value="property-registration">تسجيل عقار</option>
+                    <option value="property-transfer">نقل ملكية</option>
+                    <option value="demolition-permit">قرار هدم</option>
+                    <option value="building-permit">رخصة بناء</option>
+                `;
+                
+                // Update service info
+                document.getElementById('serviceInfo').innerHTML = `
+                    <h3>الخدمات العقارية</h3>
+                    <p>تشمل خدمات تسجيل وتوثيق العقارات، نقل الملكية، إصدار رخص البناء والهدم وغيرها من الخدمات العقارية.</p>
+                    <p><strong>المستندات المطلوبة:</strong></p>
+                    <ul>
+                        <li>صورة الهوية</li>
+                        <li>صك الملكية</li>
+                        <li>مخطط العقار</li>
+                    </ul>
+                `;
+            } else if (this.value === 'permits') {
+                serviceType.innerHTML += `
+                    <option value="commercial-permit">ترخيص تجاري</option>
+                    <option value="advertising-permit">ترخيص إعلاني</option>
+                    <option value="event-permit">ترخيص فعالية</option>
+                `;
+                
+                // Update service info
+                document.getElementById('serviceInfo').innerHTML = `
+                    <h3>التراخيص</h3>
+                    <p>تشمل إصدار وتجديد التراخيص التجارية والإعلانية وتراخيص الفعاليات وغيرها.</p>
+                    <p><strong>المستندات المطلوبة:</strong></p>
+                    <ul>
+                        <li>صورة الهوية</li>
+                        <li>السجل التجاري</li>
+                        <li>عقد الإيجار</li>
+                    </ul>
+                `;
+            } else if (this.value === 'certificates') {
+                serviceType.innerHTML += `
+                    <option value="clearance-certificate">شهادة براءة ذمة</option>
+                    <option value="completion-certificate">شهادة إتمام بناء</option>
+                    <option value="compliance-certificate">شهادة التزام</option>
+                `;
+                
+                // Update service info
+                document.getElementById('serviceInfo').innerHTML = `
+                    <h3>الشهادات</h3>
+                    <p>تشمل إصدار شهادات براءة الذمة، شهادات إتمام البناء، شهادات الالتزام وغيرها.</p>
+                    <p><strong>المستندات المطلوبة:</strong></p>
+                    <ul>
+                        <li>صورة الهوية</li>
+                        <li>المستندات ذات الصلة بالشهادة المطلوبة</li>
+                    </ul>
+                `;
+            } else if (this.value === 'other') {
+                serviceType.innerHTML += `
+                    <option value="consultation">استشارة</option>
+                    <option value="complaint-follow-up">متابعة شكوى</option>
+                    <option value="general-inquiry">استفسار عام</option>
+                `;
+                
+                // Update service info
+                document.getElementById('serviceInfo').innerHTML = `
+                    <h3>خدمات أخرى</h3>
+                    <p>تشمل الاستشارات، متابعة الشكاوى، الاستفسارات العامة وغيرها من الخدمات.</p>
+                    <p><strong>المستندات المطلوبة:</strong></p>
+                    <ul>
+                        <li>صورة الهوية</li>
+                        <li>أي مستندات ذات صلة بالخدمة المطلوبة</li>
+                    </ul>
+                `;
+            }
+        });
+        
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to the server
+            // For demonstration, we'll just show a success message
+            
+            alert('تم تأكيد الحجز بنجاح! سيتم إرسال تفاصيل الحجز إلى بريدك الإلكتروني.');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

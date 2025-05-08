@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأخبار - جهاز المدينة</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS (نفس ملف CSS من الصفحة الرئيسية) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (نفس الهيدر من الصفحة الرئيسية) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html">جهاز المدينة</a>
+                </div>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="news.html" class="active">الأخبار</a></li>
+                    <li><a href="booking.html">احجز دورك</a></li>
+                    <li><a href="complaint.html">تقديم شكوى</a></li>
+                    <li><a href="about.html">حول</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>أخبار المدينة</h1>
+                <p>ابقَ على اطلاع بأحدث الأخبار والإعلانات والتنبيهات الهامة في منطقتك</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- News Filter -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="newsCategory">تصفية حسب الفئة</label>
+                                <select class="form-select" id="newsCategory">
+                                    <option value="all" selected>جميع الفئات</option>
+                                    <option value="water">المياه</option>
+                                    <option value="electricity">الكهرباء</option>
+                                    <option value="roads">الطرق</option>
+                                    <option value="events">فعاليات</option>
+                                    <option value="announcements">إعلانات</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="newsSearch">بحث</label>
+                                <input type="text" class="form-control" id="newsSearch" placeholder="ابحث في الأخبار...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Alerts -->
+            <div class="alert alert-warning">
+                <strong>تنبيه هام:</strong> انقطاع المياه في المنطقة الشرقية غدًا من الساعة 9 صباحًا حتى 2 ظهرًا للصيانة.
+            </div>
+
+            <!-- News List -->
+            <div class="row">
+                <!-- News Item 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <img src="https://source.unsplash.com/random/800x600/?water" alt="صورة الخبر" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge badge-primary" style="margin-bottom: 0.5rem;">المياه</span>
+                            <h3 style="margin-bottom: 1rem;">انقطاع المياه للصيانة</h3>
+                            <p style="margin-bottom: 1rem;">سيتم انقطاع المياه في المنطقة الشرقية غدًا من الساعة 9 صباحًا حتى 2 ظهرًا للصيانة الدورية.</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="far fa-calendar-alt"></i> 15 مايو 2025
+                            </p>
+                            <a href="#" class="btn btn-sm">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <img src="https://source.unsplash.com/random/800x600/?electricity" alt="صورة الخبر" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge badge-warning" style="margin-bottom: 0.5rem;">الكهرباء</span>
+                            <h3 style="margin-bottom: 1rem;">صيانة شبكة الكهرباء</h3>
+                            <p style="margin-bottom: 1rem;">ستقوم فرق الصيانة بإجراء أعمال تطوير لشبكة الكهرباء في المنطقة الغربية يوم الأحد القادم.</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="far fa-calendar-alt"></i> 12 مايو 2025
+                            </p>
+                            <a href="#" class="btn btn-sm">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <img src="https://source.unsplash.com/random/800x600/?road" alt="صورة الخبر" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge badge-danger" style="margin-bottom: 0.5rem;">الطرق</span>
+                            <h3 style="margin-bottom: 1rem;">إغلاق الطريق الرئيسي</h3>
+                            <p style="margin-bottom: 1rem;">سيتم إغلاق الطريق الرئيسي بالمنطقة الوسطى لمدة 3 أيام بسبب أعمال الرصف والتطوير.</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="far fa-calendar-alt"></i> 10 مايو 2025
+                            </p>
+                            <a href="#" class="btn btn-sm">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <img src="https://source.unsplash.com/random/800x600/?event" alt="صورة الخبر" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge badge-success" style="margin-bottom: 0.5rem;">فعاليات</span>
+                            <h3 style="margin-bottom: 1rem;">مهرجان المدينة السنوي</h3>
+                            <p style="margin-bottom: 1rem;">يسر جهاز المدينة الإعلان عن انطلاق فعاليات مهرجان المدينة السنوي في الحديقة المركزية.</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="far fa-calendar-alt"></i> 5 مايو 2025
+                            </p>
+                            <a href="#" class="btn btn-sm">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <img src="https://source.unsplash.com/random/800x600/?announcement" alt="صورة الخبر" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge badge-info" style="margin-bottom: 0.5rem;">إعلانات</span>
+                            <h3 style="margin-bottom: 1rem;">تحديث نظام الخدمات الإلكترونية</h3>
+                            <p style="margin-bottom: 1rem;">تم تحديث نظام الخدمات الإلكترونية بمميزات جديدة لتسهيل الإجراءات على المواطنين.</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="far fa-calendar-alt"></i> 1 مايو 2025
+                            </p>
+                            <a href="#" class="btn btn-sm">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <img src="https://source.unsplash.com/random/800x600/?construction" alt="صورة الخبر" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge badge-primary" style="margin-bottom: 0.5rem;">تطوير</span>
+                            <h3 style="margin-bottom: 1rem;">افتتاح مركز خدمة جديد</h3>
+                            <p style="margin-bottom: 1rem;">تم افتتاح مركز خدمة جديد في المنطقة الجنوبية لتقديم كافة خدمات جهاز المدينة.</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="far fa-calendar-alt"></i> 28 أبريل 2025
+                            </p>
+                            <a href="#" class="btn btn-sm">قراءة المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="#" class="btn btn-sm" style="background-color: var(--primary-lighter); color: var(--primary);">السابق</a>
+                    <a href="#" class="btn btn-sm" style="background-color: var(--primary); color: var(--white);">1</a>
+                    <a href="#" class="btn btn-sm" style="background-color: var(--primary-lighter); color: var(--primary);">2</a>
+                    <a href="#" class="btn btn-sm" style="background-color: var(--primary-lighter); color: var(--primary);">3</a>
+                    <a href="#" class="btn btn-sm" style="background-color: var(--primary-lighter); color: var(--primary);">التالي</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (نفس الفوتر من الصفحة الرئيسية) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>عن جهاز المدينة</h3>
+                <p>الخدمات الأكثر طلبًا</p>
+                <p>فريقنا</p>
+            </div>
+            <div class="footer-column">
+                <h3>تواصل</h3>
+                <p>اتصل بنا</p>
+                <p>مركز المساعدة</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="copyright">
+            &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+        </div>
+    </footer>
+
+    <script>
+        // Highlight active nav link based on current URL
+        const links = document.querySelectorAll(".nav-links a");
+        const currentUrl = window.location.href;
+        links.forEach(link => {
+            if (currentUrl.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const body = document.body;
+        
+        menuToggle.addEventListener('change', function() {
+            if(this.checked) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // News filtering
+        document.getElementById('newsCategory').addEventListener('change', function() {
+            // Filter news based on category
+            console.log('Filtering by category: ' + this.value);
+            // Here you would implement the actual filtering logic
+        });
+
+        document.getElementById('newsSearch').addEventListener('input', function() {
+            // Search news based on input
+            console.log('Searching for: ' + this.value);
+            // Here you would implement the actual search logic
+        });
+    </script>
+</body>
+</html>
